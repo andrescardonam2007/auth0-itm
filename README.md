@@ -86,14 +86,12 @@ Abre `http://localhost:3000` → **Iniciar sesión** → te lleva al formulario 
    - **Page background:** el mismo morado o una **imagen de fondo** del campus (en *Themes → Page Background → Background image URL*).
 3. Guarda y usa el botón **Try** o vuelve a iniciar sesión desde tu app.
 
-📸 **Evidencia Punto 2:** captura del login de Auth0 con logo y colores del ITM.
 
 ### Paso 6 – Formulario de datos (Punto 3)
 Ya logueado, entra a **Mis datos** (`/perfil`).
 - La ruta `GET /perfil` llama a `GET /api/v2/users/{id}` y lee `user_metadata`.
 - La primera vez los campos salen **vacíos** porque `user_metadata` es `{}`.
 
-📸 **Evidencia Punto 3:** captura del formulario vacío.
 
 ### Paso 7 – Guardar con la Management API (Punto 4)
 Llena los campos y pulsa **Guardar en Auth0**. La app:
@@ -103,7 +101,6 @@ Llena los campos y pulsa **Guardar en Auth0**. La app:
 
 Compruébalo también en el dashboard: **User Management → Users → tu usuario → Details → user_metadata**.
 
-📸 **Evidencia Punto 4:** captura de `services/auth0Management.js` (función `updateUserMetadata`), del formulario con el mensaje de éxito y del `user_metadata` en el dashboard.
 
 ### Paso 8 – GitHub (Punto 5)
 ```bash
@@ -114,9 +111,8 @@ git branch -M main
 git remote add origin https://github.com/<tu-usuario>/auth0-itm.git
 git push -u origin main
 ```
-> `.env` está en `.gitignore`: **nunca** subas tus secretos.
+RECOMENDACION : > `.env` está en `.gitignore`: **nunca** subas tus secretos.
 
-Comparte el repositorio: en GitHub → **Settings → Collaborators → Add people** → `jonathansanchez2948@correo.itm.edu.co`.
 
 ---
 
